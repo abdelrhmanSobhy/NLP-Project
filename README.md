@@ -1,97 +1,165 @@
-🧠 NLP-Project
+# 🧠 NLP Project
 
-A full-stack Natural Language Processing (NLP) web application consisting of a Flask REST API backend and a React/Vue frontend chatbot interface for handling user text queries and delivering intelligent responses.
+A full‑stack **Natural Language Processing (NLP) Chatbot** project built with a **Flask REST API backend** and a **frontend chatbot interface**. The project demonstrates intent detection, text processing, and API‑based communication between frontend and backend.
 
-🚀 Table of Contents
+---
 
-💡 About
+## 🚀 Features
 
-⚙️ Features
+* 🤖 NLP‑based chatbot
+* 🔌 RESTful API using Flask
+* 🌐 Frontend chatbot UI
+* 🔁 Real‑time message exchange
+* 🧪 Health & statistics endpoints
+* 🔒 CORS configured for frontend integration
 
-📁 Project Structure
+---
 
-🛠 Technologies Used
+## 📁 Project Structure
 
-🧩 Installation & Setup
-
-▶️ Running the App
-
-📌 API Endpoints
-
-🤝 Contributing
-
-📄 License
-
-💡 About
-
-This project demonstrates an NLP-powered chatbot with a backend API built on Flask and a frontend that interacts with users. It can be used as a learning tool or foundation for more advanced NLP integrations and chat interfaces.
-
-⚙️ Features
-
-✅ Chatbot API that takes user messages and returns responses
-✅ NLP processing for intent detection and reply generation
-✅ Health & stats endpoints for application monitoring
-✅ Frontend UI for real-time interaction
-✅ CORS configured for local development
-
-📁 Project Structure
-/NLP-Project
-├── Backend/                        # Flask API backend
-├── Frontend/student-chatbot/       # React chatbot UI
+```
+NLP-Project/
+├── Backend/                 # Flask API backend
+│   ├── app.py
+│   ├── chatbot.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── Frontend/
+│   └── student-chatbot/     # Frontend (React / Vite)
+│
 ├── .gitignore
-├── requirements.txt
 └── README.md
+```
 
+---
 
-Based on your repository contents. 
-GitHub
+## 🛠 Technologies Used
 
-🛠 Technologies Used
+### Backend
 
-✔ Python (Flask)
-✔ JavaScript (React)
-✔ Flask-CORS
-✔ NLP tooling (TF-IDF, KNN, or similar)
-✔ REST API
+* Python
+* Flask
+* Flask‑CORS
+* NLP techniques (TF‑IDF, KNN, etc.)
 
-🧩 Installation & Setup
-Backend
+### Frontend
 
-Clone the repository:
+* JavaScript
+* React / Vite
+* Fetch API
 
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/abdelrhmanSobhy/NLP-Project.git
-cd NLP-Project/Backend
+cd NLP-Project
+```
 
+---
 
-Create a virtual environment:
+### 2️⃣ Backend Setup
 
-python3 -m venv venv
-source venv/bin/activate
-
-
-Install dependencies:
+```bash
+cd Backend
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
+```
 
-▶️ Running the App
-Start the Backend (Flask API)
+---
+
+### 3️⃣ Run the Backend
+
+```bash
 python app.py
+```
 
+Backend will run at:
 
-The server should start at:
-
+```
 http://localhost:5000
+```
 
-📌 API Endpoints
-Endpoint	Method	Description
-/api/health	GET	API health check
-/api/greeting	GET	Get a greeting phrase
-/api/chat	POST	Send user message & get bot response
-/api/intents	GET	List available intents
-/api/stats	GET	Stats about the model
-/	GET	Basic API info
+---
 
-Example Request
+## 📡 API Endpoints
+
+| Endpoint        | Method | Description         |
+| --------------- | ------ | ------------------- |
+| `/`             | GET    | API info            |
+| `/api/health`   | GET    | Health check        |
+| `/api/greeting` | GET    | Time‑based greeting |
+| `/api/chat`     | POST   | Chat with the bot   |
+| `/api/intents`  | GET    | Available intents   |
+| `/api/stats`    | GET    | Model statistics    |
+
+### Example Request
+
+```bash
 curl -X POST http://localhost:5000/api/chat \
   -H "Content-Type: application/json" \
   -d '{"message":"Hello"}'
+```
+
+---
+
+## 🌐 Frontend Setup
+
+```bash
+cd Frontend/student-chatbot
+npm install
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file if needed (do not commit it):
+
+```
+PORT=5000
+```
+
+---
+
+## 📌 Notes
+
+* `.gitignore` is configured to exclude:
+
+  * `node_modules/`
+  * `venv/`
+  * `.env`
+* `.nvmrc` can be used to define Node version
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
+---
+
+## 📄 License
+
+This project is open‑source and intended for **educational purposes**.
+
+---
+
+⭐ If you like this project, don’t forget to star the repository!
